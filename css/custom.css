@@ -16,6 +16,9 @@ section#main {
 
 section.newsletter .form-holder {
 	padding: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+
     margin-top: 0px;
     margin-bottom: 20px;
 }
