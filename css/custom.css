@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+    background-image: url('../img/background-1.png');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+p, h2 {
+	color: #FFF
+}
+
+section#main {
+    padding: 50px 0;
+}
+
+section.newsletter .form-holder {
+	padding: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+section.newsletter .form-holder {
+	background-color: transparent;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+section.newsletter .form-group input {
+	background-color: #FFF;
+}
+
+footer.main-footer {
+    padding-top: 30px;
+}
+
+footer.main-footer .copyrights {
+    margin-top: 0px
+}
+
+footer.main-footer .copyrights .container {
+	border: none
+}
