@@ -7,20 +7,27 @@
             <meta name="description" content="">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="robots" content="all,follow">
+
             <!-- Bootstrap CSS-->
             <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
             <!-- Font Awesome CSS-->
             <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
+
             <!-- Custom Font Icons CSS-->
             <link rel="stylesheet" href="/assets/css/landy-iconfont.css">
+
             <!-- Google fonts - Open Sans-->
             <link rel="stylesheet" href="/assets/https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
+
             <!-- owl carousel-->
             <link rel="stylesheet" href="/assets/vendor/owl.carousel/assets/owl.carousel.css">
             <link rel="stylesheet" href="/assets/vendor/owl.carousel/assets/owl.theme.default.css">
+
             <!-- theme stylesheet-->
             <link rel="stylesheet" href="/assets/css/style.default.css" id="theme-stylesheet">
-            <!-- Custom stylesheet - for your changes-->
+
+            <!-- Custom stylesheet -->
             <link rel="stylesheet" href="/assets/css/custom.css">
 
             <!-- Favicon-->
@@ -41,6 +48,7 @@
             <meta name="msapplication-TileColor" content="#ffffff">
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
             <meta name="theme-color" content="#ffffff">
+
             <!-- Tweaks for older IEs--><!--[if lt IE 9]>
                 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
                 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->

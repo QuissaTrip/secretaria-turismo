@@ -1,22 +1,56 @@
-<?php getHtmlHeader() ?>
-<?php getNavbar() ?>
+<?php
+    $places = json_decode( file_get_contents(APP_URL . "/places") );
+?>
 
+<?php getHtmlHeader() ?>
+    <?php getNavbar() ?>
     <section id="hero" class="hero hero-home bg-gray">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-lg-6 text order-2 order-lg-1">
-            <h1><b>QuissaTrip</b><br>Quissamã na palma da sua mão</h1>
-            <p class="hero-text">Aderindo as tendências do século 21, Quissamã agora possui também um aplicativo de turismo. Nele é possível encontrar todos os comércios, hotéis, pousadas, restaurantes e serviços cadastrados.</p>
-            <div class="CTA">
-                <a href="#" class="btn btn-primary btn-shadow btn-gradient link-scroll">Baixar agora</a>
-                <a href="#" class="btn btn-outline-primary">Saiba mais</a></div>
-          </div>
-          <div class="col-lg-6 order-1 order-lg-2">
-              <img src="/assets/img/phone.png" alt="QuissaTrip - Phone" class="img-fluid">
-          </div>
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-lg-6 text order-2 order-lg-1">
+                    <h1><b>QuissaTrip</b><br>Quissamã na palma da sua mão</h1>
+                    <p class="hero-text">Aderindo as tendências do século 21, Quissamã agora possui também um aplicativo de turismo. Nele é possível encontrar todos os comércios, hotéis, pousadas, restaurantes e serviços cadastrados.</p>
+                    <div class="CTA">
+                        <a href="#" class="btn btn-primary btn-shadow btn-gradient link-scroll">Baixar agora</a>
+                        <a href="#" class="btn btn-outline-primary">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <img src="/assets/img/phone.png" alt="QuissaTrip - Phone" class="img-fluid">
+                </div>
+            </div>
         </div>
-      </div>
     </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <header class="text-center no-margin-bottom">
+                <h2>Principais Lugares</h2>
+                <p class="lead col-lg-8 mx-auto" style="color: rgba(0,0,0,0.6)">Lero lero lero lero lero lero lero lero lero</p>
+                <!--p class="lead">There are many variations of passages of Lorem Ipsum available, but the majority have</p-->
+            </header>
+            <div class="owl-carousel owl-theme testimonials-slider">
+                <?php
+                    $limit = count($places);
+                    $limit = ( $limit > 4 ) ? 4 : $limit;
+
+                    for ($i=0; $i < $limit; $i++) {
+                        $place = $places[$i]; ?>
+                        <div class="card text-center">
+                            <img class="background" src="<?php echo $place->image ?>" />
+                            <div class="content">
+                                <h4><?php echo $place->name ?></h4>
+                                <a href="#" class="btn btn-outline-white">Ver mais</a>
+                            </div>
+                        </div> <?php
+                    }
+                ?>
+            </div>
+        </div>
+    </section>
+
+    <div style="margin: -70px"></div>
+
     <!--section id="browser" class="browser">
       <div class="container">
         <div class="row d-flex justify-content-center">
@@ -118,52 +152,6 @@
         </div>
       </div>
     </section>
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-        <header class="text-center no-margin-bottom">
-          <h2>Happy Clients</h2>
-          <p class="lead">There are many variations of passages of Lorem Ipsum available, but the majority have</p>
-        </header>
-        <div class="owl-carousel owl-theme testimonials-slider">
-          <div class="item-holder">
-            <div class="item">
-              <div class="avatar"><img src="/assets/img/avatar-3.jpg" alt="..." class="img-fluid"></div>
-              <div class="text">
-                <div class="quote"><img src="/assets/img/quote.svg" alt="..." class="img-fluid"></div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong class="name">Jessica Watson</strong>
-              </div>
-            </div>
-          </div>
-          <div class="item-holder">
-            <div class="item">
-              <div class="avatar"><img src="/assets/img/avatar-5.jpg" alt="..." class="img-fluid"></div>
-              <div class="text">
-                <div class="quote"><img src="/assets/img/quote.svg" alt="..." class="img-fluid"></div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong class="name">Sarrah Wood</strong>
-              </div>
-            </div>
-          </div>
-          <div class="item-holder">
-            <div class="item">
-              <div class="avatar"><img src="/assets/img/avatar-3.jpg" alt="..." class="img-fluid"></div>
-              <div class="text">
-                <div class="quote"><img src="/assets/img/quote.svg" alt="..." class="img-fluid"></div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong class="name">Jessica Watson</strong>
-              </div>
-            </div>
-          </div>
-          <div class="item-holder">
-            <div class="item">
-              <div class="avatar"><img src="/assets/img/avatar-5.jpg" alt="..." class="img-fluid"></div>
-              <div class="text">
-                <div class="quote"><img src="/assets/img/quote.svg" alt="..." class="img-fluid"></div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p><strong class="name">Sarrah Wood</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="newsletter" class="newsletter bg-gray">
       <div class="container text-center">
         <h2>Subscribe to Newsletter</h2>
@@ -177,7 +165,7 @@
           </form>
         </div>
       </div>
-    </section-->
+  </section-->
     <?php scrollToTop() ?>
     <?php getFooter() ?>
 <?php getScripts() ?>

@@ -3,6 +3,22 @@ nav.navbar .navbar-brand img {
     width: 1.8em;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
+.btn.btn-outline-white {
+    color: #FFF;
+    background-color: transparent;
+    background-image: none;
+    border-color: #FFF;
+}
+    .btn.btn-outline-white:hover {
+        color: rgba(0,0,0,0.7);
+        background-color: #fff;
+        border-color: #fff;
+    }
+
 /* HERO STYLES */
     #hero h1 {
         font-size: 2.8em !important;
@@ -15,4 +31,56 @@ nav.navbar .navbar-brand img {
         width: 60% !important;
         margin: auto 20%;
         margin-top: -10%;
+    }
+
+/* CARD STYLES */
+.card {
+    background-position: center center;
+    background-size: cover;
+    min-height: 310px;
+    min-width: 80%;
+    max-width: 320px;
+    justify-content: center;
+
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.23);
+    background-color: #000;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+    .background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.7;
+        transition: all 0.3s;
+        border-radius: 6px;
+    }
+
+    .card:hover .background {
+        opacity: 0.3;
+    }
+
+    .content {
+        z-index: 10;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .card .content h4 {
+        color: #FFF;
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-bottom: 1em;
+    }
+
+    .card .content a {
+        margin-top: 1em;
     }

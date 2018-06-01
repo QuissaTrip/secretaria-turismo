@@ -18,7 +18,7 @@
 
 	function scrollToTop() { ?>
 	    <div id="scrollTop">
-	      	<div class="d-flex align-items-center justify-content-end"><i class="fa fa-long-arrow-up"></i>&nbsp;&nbsp;&nbsp; Topo</div>
+	      	<div class="d-flex align-items-center justify-content-end"><i class="fa fa-long-arrow-up"></i>&nbsp;&nbsp; Topo &nbsp;</div>
 	    </div> <?php
 	}
 
