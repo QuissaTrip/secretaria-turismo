@@ -1,0 +1,18 @@
+/* your styles go here */
+nav.navbar .navbar-brand img {
+    width: 1.8em;
+}
+
+/* HERO STYLES */
+    #hero h1 {
+        font-size: 2.8em !important;
+        font-weight: 500;
+    }
+    #hero b {
+        line-height: 1.7em;
+    }
+    #hero img.img-fluid {
+        width: 60% !important;
+        margin: auto 20%;
+        margin-top: -10%;
+    }
