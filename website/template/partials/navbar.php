@@ -2,7 +2,7 @@
 <header class="header">
     <nav class="navbar navbar-expand-lg fixed-top">
         <a href="index.html" class="navbar-brand">
-            <img src="/assets/img/quissatrip.png"/>
+            <img src="/website/assets/img/quissatrip.png"/>
         </a>
         <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span></span><span></span><span></span></button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse">

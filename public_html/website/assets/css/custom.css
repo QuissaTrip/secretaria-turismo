@@ -19,6 +19,11 @@ nav.navbar .navbar-brand img {
         border-color: #fff;
     }
 
+.phone-image-feature {
+    width: 50%;
+    margin: auto 25%
+}
+
 /* HERO STYLES */
     #hero h1 {
         font-size: 2.8em !important;
@@ -83,4 +88,6 @@ nav.navbar .navbar-brand img {
 
     .card .content a {
         margin-top: 1em;
+        border-width: 2px;
+        font-weight: 600;
     }

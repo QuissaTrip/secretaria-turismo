@@ -1,3 +1,9 @@
+<?php
+    $link = APP_URL . "/commerces?category=";
+    $restaurants = json_decode( file_get_contents($link . "1") );
+    $hotels = json_decode( file_get_contents($link . "2") );
+?>
+
 <footer class="main-footer">
     <div class="container">
         <div class="row">
@@ -16,19 +22,31 @@
             <div class="col-lg-3 col-md-6">
                 <h5>Onde Ficar?</h5>
                 <ul class="links list-unstyled">
-                    <li> <a href="#">Hotel 1</a></li>
-                    <li> <a href="#">Hotel 2</a></li>
-                    <li> <a href="#">Pousada 1</a></li>
-                    <li> <a href="#">Veja mais...</a></li>
+                    <?php
+                        $limit = count($hotels);
+                        $limit = ( $limit > 3 ) ? 3 : $limit;
+
+                        for ($i=0; $i < $limit; $i++) {
+                            $hotel = $hotels[$i]; ?>
+                            <li><a href="/website/lugares/<?php echo $hotel->id ?>"><?php echo $hotel->name ?></a></li> <?php
+                        }
+                    ?>
+                    <li> <a href="/website/lugares/">Veja mais...</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5>Onde commer?</h5>
+                <h5>Onde comer?</h5>
                 <ul class="links list-unstyled">
-                    <li> <a href="#">Restaurante 1</a></li>
-                    <li> <a href="#">Lanchonete 1</a></li>
-                    <li> <a href="#">Restaurante 2</a></li>
-                    <li> <a href="#">Veja mais...</a></li>
+                    <?php
+                        $limit = count($restaurants);
+                        $limit = ( $limit > 3 ) ? 3 : $limit;
+
+                        for ($i=0; $i < $limit; $i++) {
+                            $restaurant = $restaurants[$i]; ?>
+                            <li><a href="/website/lugares/<?php echo $restaurant->id ?>"><?php echo $restaurant->name ?></a></li> <?php
+                        }
+                    ?>
+                    <li> <a href="/website/lugares/">Veja mais...</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6">
