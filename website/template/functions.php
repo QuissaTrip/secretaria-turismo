@@ -1,14 +1,12 @@
 <?php
-	/*
-		$response = file_get_contents(APP_URL . "/places");
-		var_dump($response);
-	*/
-
 	define('PARTIALS_URL', '../../website/template/partials/');
-
 
 	function getHtmlHeader($data = null) {
 		$title = ( isset( $data["title"] ) ) ? $data["title"] : APP_NAME;
+		$description = "Quissamã na palma da sua mão. Aderindo as tendências do século 21, Quissamã agora possui também um aplicativo de turismo. Nele é possível encontrar todos os comércios, hotéis, pousadas, restaurantes e serviços cadastrados.";
+		$description = ( isset( $data["description"] ) ) ? $data["description"] : $description;
+		$icon = BASE_URL . "/website/assets/img/quissatrip.png";
+		$fb = BASE_URL . "/website/assets/img/facebbok-share.png";
 		require PARTIALS_URL . "header.php";
 	}
 

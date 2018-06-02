@@ -4,9 +4,25 @@
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <title><?php echo $title ?></title>
-            <meta name="description" content="">
+            <meta name="description" content="<?php echo $description ?>">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="robots" content="all,follow">
+
+            <!-- Twitter Card data -->
+            <meta name="twitter:card" value="summary">
+            <meta name="twitter:site" content="@lucascraveirop1">
+            <meta name="twitter:title" content="<?php echo $title ?>">
+            <meta name="twitter:description" content="<?php echo $description ?>">
+            <meta name="twitter:creator" content="@lucascraveirop1">
+            <meta name="twitter:image" content="<?php echo $fb ?>">
+
+            <!-- Open Graph data -->
+            <meta property="og:title" content="<?php echo $title ?>" />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="<?php echo BASE_URL . "/website" ?>" />
+            <!-- IMAGE MUST HAVE 1200x630 -->
+            <meta property="og:image" content="<?php echo $fb ?>" />
+            <meta property="og:description" content="<?php echo $description ?>" />
 
             <!-- Bootstrap CSS-->
             <link rel="stylesheet" href="/website/assets/vendor/bootstrap/css/bootstrap.min.css">
