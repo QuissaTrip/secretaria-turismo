@@ -1,4 +1,7 @@
-/* your styles go here */
+.lazy-hidden{
+    background:url("../img/loader.svg") 50% 50% no-repeat #eee
+}
+
 nav.navbar .navbar-brand img {
     width: 1.8em;
 }

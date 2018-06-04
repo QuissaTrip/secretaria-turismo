@@ -5,8 +5,18 @@
         <script src="/website/assets/vendor/jquery.cookie/jquery.cookie.js"> </script>
         <script src="/website/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
         <script src="/website/assets/js/front.js"></script>
+        <script src="/website/assets/js/jquery.lazyloadxt.min.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
         <!---->
+
+        <?php
+            if ($is_single == true) { ?>
+                <link rel="stylesheet" href="<?php echo ASSETS_URL ?>/css/single.css">
+                <link rel="stylesheet" href="<?php echo ASSETS_URL ?>/css/lightbox.css">
+                <script                 src="<?php echo ASSETS_URL ?>/js/lightbox.js"></script> <?php
+            }
+        ?>
+
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

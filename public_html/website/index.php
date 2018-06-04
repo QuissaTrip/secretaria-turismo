@@ -9,6 +9,19 @@
     define('APP_NAME', "QuissaTrip");
 	define("APP_URL", "http://lucascraveiropaes.com/app");
 	define("BASE_URL", "http://lucascraveiropaes.com");
+	define("IMAGE_URL", "/website/assets/img");
+	define("ASSETS_URL", "/website/assets");
+
+	// Internal Links
+	define("LUGARES_LINK", "/website/lugares");
+	define("LUGAR_LINK", "/website/lugares/");
+	define("CIRCUIT_LINK", "/website/circuitos/");
+	define("ROLEZINHOS_LINK", "/website/rolezinhos");
+	define("AGENDA_LINK", "/website/agenda");
+	define("SERVICOS_LINK", "/website/servicos");
+	define("ONDE_COMER_LINK", "/website/onde-comer");
+	define("ONDE_FICAR_LINK", "/website/onde-ficar");
+	define("PLAYSTORE_LINK", "#");
 
 	require '../../website/vendor/autoload.php';
 	require '../../website/template/functions.php';

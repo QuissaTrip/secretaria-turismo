@@ -1,0 +1,132 @@
+.single-header {
+    height: 60vh;
+    background: #000;
+}
+    .single-bg {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        z-index: 0;
+        display: block;
+        height: 70vh;
+        width: 100%;
+
+        background-color: #000;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        -webkit-filter: opacity(45%);
+        -moz-filter: opacity(45%);
+        -o-filter: opacity(45%);
+        -ms-filter: opacity(45%);
+        filter: opacity(45%);
+    }
+    .single-header .content {
+        left: 0;
+        right: 0;
+        z-index: 21;
+        position: absolute;
+        text-align: center;
+        margin-top: -3em;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+        .single-header .content a {
+            color: #FFF;
+            border-color: #FFF;
+            border-width: 2px;
+            margin-top: 25px;
+        }
+            .single-header .content a:hover {
+                color: rgba(0,0,0,0.7);
+                background-color: #FFF;
+            }
+
+        .single-header .content h2 {
+            color: #FFF;
+            font-weight: 400;
+            font-size: 2.5em;
+        }
+        .single-header .content h4,
+        .single-header .content h6 {
+            color: rgba(255,255,255,0.85);
+            margin-top: 17px;
+            font-weight: 300;
+            font-size: 1.1em;
+        }
+        .single-header .content h4 {
+            margin-top: 14px;
+            font-size: 1.6em;
+        }
+
+.single-body {
+    background: #FFF;
+    position: inherit;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+    .single-body > * {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .single-body .title {
+        color: #000;
+        font-weight: 600;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .single-body p {
+        color: rgba(0,0,0,0.7);
+        font-weight: 300;
+        font-size: 1.15em;
+    }
+
+
+.image-slider {
+    margin: 3em auto -10em auto;
+}
+        .image-slider h3 {
+            font-weight: 600;
+            margin-bottom: 30px
+        }
+
+    .image-slider .card {
+        min-height: 430px;
+        max-width: 100%;
+    }
+
+.glightbox img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+    .single-header .content a {
+        margin-top: -10px;
+    }
+    .single-body {
+        padding-left: 6em !important;
+        padding-right: 6em !important;
+    }
+}
+
+.main-footer {
+    position: absolute;
+    z-index: 10;
+    background: #FFF;
+    width: 100%;
+}
