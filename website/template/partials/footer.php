@@ -2,6 +2,7 @@
     $link = APP_URL . "/commerces?category=";
     $restaurants = json_decode( file_get_contents($link . "1") );
     $hotels = json_decode( file_get_contents($link . "2") );
+    $services = getServices();
 ?>
 
 <footer class="main-footer">
@@ -32,7 +33,7 @@
                             <li><a href="<?php echo LUGAR_LINK . $hotel->id ?>"><?php echo $hotel->name ?></a></li> <?php
                         }
                     ?>
-                    <li> <a href="<?php echo LUGAR_LINK ?>">Veja mais...</a></li>
+                    <li> <a href="<?php echo ONDE_FICAR_LINK ?>">Veja mais...</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
@@ -47,16 +48,22 @@
                             <li><a href="<?php echo LUGAR_LINK . $restaurant->id ?>"><?php echo $restaurant->name ?></a></li> <?php
                         }
                     ?>
-                    <li> <a href="<?php echo LUGAR_LINK ?>">Veja mais...</a></li>
+                    <li> <a href="<?php echo ONDE_COMER_LINK ?>">Veja mais...</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <h5>Serviços</h5>
                 <ul class="links list-unstyled">
-                    <li><a href="#">Postos de Gasolina</a></li>
-                    <li><a href="#">Táxis</a></li>
-                    <li><a href="#">Guias Turísticos</a></li>
-                    <li><a href="<?php echo LUGAR_LINK ?>">Veja mais...</a></li>
+                    <?php
+                        $limit = count($services);
+                        $limit = ( $limit > 3 ) ? 3 : $limit;
+
+                        for ($i=0; $i < $limit; $i++) {
+                            $service = $services[$i]; ?>
+                            <li><a href="<?php echo LUGAR_LINK . $service->id ?>"><?php echo $service->name ?></a></li> <?php
+                        }
+                    ?>
+                    <li> <a href="<?php echo SERVICOS_LINK ?>">Veja mais...</a></li>
                 </ul>
             </div>
         </div>

@@ -5,6 +5,10 @@
         return $this->view->render($response, 'index.php');
     });
 
+    $app->get('/rolezinhos', function ($request, $response, $args) {
+        return $this->view->render($response, 'rolezinhos.php');
+    });
+
     $app->get('/onde-ficar', function ($request, $response, $args) {
         return $this->view->render($response, 'lugares.php', array(
             "url" => "/commerces?category=2",

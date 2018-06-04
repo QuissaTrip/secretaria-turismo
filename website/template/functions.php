@@ -1,6 +1,15 @@
 <?php
 	define('PARTIALS_URL', '../../website/template/partials/');
 
+	function getServices() {
+		$URL = "/commerces";
+        $postos = json_decode( file_get_contents(APP_URL . $URL . "?category=3") );
+        $diversao = json_decode( file_get_contents(APP_URL . $URL . "?category=4") );
+        $bancos = json_decode( file_get_contents(APP_URL . $URL . "?category=6") );
+
+        return array_merge($postos, $diversao, $bancos);
+	}
+
 	function getHtmlHeader($data = null) {
 		$title = ( isset( $data["title"] ) ) ? $data["title"] : APP_NAME;
 		$description = "Quissamã na palma da sua mão. Aderindo as tendências do século 21, Quissamã agora possui também um aplicativo de turismo. Nele é possível encontrar todos os comércios, hotéis, pousadas, restaurantes e serviços cadastrados.";

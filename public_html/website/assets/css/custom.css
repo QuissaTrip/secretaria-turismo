@@ -59,7 +59,8 @@ nav.navbar .navbar-brand img {
     border: none;
 }
 
-    .background {
+    .card .background,
+    .role-card .background {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -76,7 +77,7 @@ nav.navbar .navbar-brand img {
         opacity: 0.3;
     }
 
-    .content {
+    .card .content {
         z-index: 10;
         justify-content: space-around;
         padding: 20px;

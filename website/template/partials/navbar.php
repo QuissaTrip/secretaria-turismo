@@ -21,7 +21,7 @@
                 <li class="nav-item"><a href="<?php echo SERVICOS_LINK ?>" class="nav-link link-scroll">Serviços</a></li>
             </ul>
             <div class="navbar-text">
-                <a href="#" class="btn btn-primary navbar-btn btn-shadow btn-gradient">Rolezinhos</a>
+                <a href="<?php echo ROLEZINHOS_LINK ?>" class="btn btn-primary navbar-btn btn-shadow btn-gradient">Rolezinhos</a>
             </div>
         </div>
     </nav>

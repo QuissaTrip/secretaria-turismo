@@ -3,10 +3,7 @@
     $TITLE = $data["title"];
 
     if ($URL == "/commerces") {
-        $postos = json_decode( file_get_contents(APP_URL . $URL . "?category=3") );
-        $diversao = json_decode( file_get_contents(APP_URL . $URL . "?category=4") );
-        $bancos = json_decode( file_get_contents(APP_URL . $URL . "?category=6") );
-        $places = array_merge($postos, $diversao, $bancos);
+        $places = getServices();
     } else {
         $places = json_decode( file_get_contents(APP_URL . $URL) );
     }
