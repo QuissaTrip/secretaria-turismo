@@ -5,6 +5,10 @@
         return $this->view->render($response, 'index.php');
     });
 
+    $app->get('/agenda', function ($request, $response, $args) {
+        return $this->view->render($response, 'agenda.php');
+    });
+
     $app->get('/rolezinhos', function ($request, $response, $args) {
         return $this->view->render($response, 'rolezinhos.php');
     });

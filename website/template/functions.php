@@ -37,6 +37,7 @@
 
 	function getScripts($data = null) {
 		$is_single = ( isset( $data["title"] ) ) ? true : false;
+		$calendar = ( isset( $data["calendar"] ) ) ? true : false;
 		require PARTIALS_URL . "scripts.php";
 	}
 ?>

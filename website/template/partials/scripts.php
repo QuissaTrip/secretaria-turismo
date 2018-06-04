@@ -14,7 +14,14 @@
                 <link rel="stylesheet" href="<?php echo ASSETS_URL ?>/css/single.css"> <?php
             }
         ?>
-        
+
+        <?php
+            if ($calendar == true) { ?>
+                <link rel="stylesheet" href="<?php echo ASSETS_URL ?>/vendor/calendar/fullcalendar.css">
+                <script src="<?php echo ASSETS_URL ?>/vendor/calendar/fullcalendar.js"></script> <?php
+            }
+        ?>
+
         <link rel="stylesheet" href="<?php echo ASSETS_URL ?>/css/lightbox.css">
         <script src="<?php echo ASSETS_URL ?>/js/lightbox.js"></script>
 
