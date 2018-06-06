@@ -1,12 +1,6 @@
 <?php
-    $URL = $data["url"];
     $TITLE = $data["title"];
-
-    if ($URL == "/commerces") {
-        $places = getServices();
-    } else {
-        $places = json_decode( file_get_contents(APP_URL . $URL) );
-    }
+    $places = json_decode( file_get_contents(APP_URL . $data["url"]) );
 ?>
 
 <?php getHtmlHeader() ?>

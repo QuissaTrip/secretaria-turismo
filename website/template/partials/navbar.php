@@ -15,7 +15,7 @@
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto align-items-start align-items-lg-center">
                 <li class="nav-item"><a href="<?php echo $link ?>#sobre" class="nav-link link-scroll">Sobre</a></li>
-                <li class="nav-item"><a href="<?php echo $link ?>#lugares" class="nav-link link-scroll">Lugares</a></li>
+                <li class="nav-item"><a href="<?php echo LUGARES_LINK ?>" class="nav-link link-scroll">Lugares</a></li>
                 <li class="nav-item"><a href="<?php echo ONDE_FICAR_LINK ?>" class="nav-link link-scroll">Onde Ficar</a></li>
                 <li class="nav-item"><a href="<?php echo ONDE_COMER_LINK ?>" class="nav-link link-scroll">Onde Comer</a></li>
                 <li class="nav-item"><a href="<?php echo SERVICOS_LINK ?>" class="nav-link link-scroll">Serviços</a></li>

@@ -2,7 +2,7 @@
     $link = APP_URL . "/commerces?category=";
     $restaurants = json_decode( file_get_contents($link . "1") );
     $hotels = json_decode( file_get_contents($link . "2") );
-    $services = getServices();
+    $services = json_decode( file_get_contents($link . "3") );
 ?>
 
 <footer class="main-footer">

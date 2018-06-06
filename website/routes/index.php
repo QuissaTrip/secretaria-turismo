@@ -22,7 +22,7 @@
 
     $app->get('/servicos', function ($request, $response, $args) {
         return $this->view->render($response, 'lugares.php', array(
-            "url" => "/commerces",
+            "url" => "/commerces?category=3",
             "title" => "Serviços dentro do município"
         ));
     });
@@ -44,6 +44,11 @@
     $app->get('/lugares/{ id }', function ($request, $response, $args) {
         $id = $request->getAttribute("route")->getArgument("id");
         $content = json_decode( file_get_contents(APP_URL . "/entity/" . $id) );
+
+        if ($content == false or $content == null) {
+            header("Location:" . BASE_URL . "/lugares");
+            exit();
+        }
 
         return $this->view->render($response, 'lugar.php', array( "content" => $content ));
     });

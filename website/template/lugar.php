@@ -4,6 +4,7 @@
     $address = $place->address;
     $open = $place->open;
     $close = $place->close;
+    $headerDescription = "";
 
     if (strlen($place->address_extra) > 0)
         $address .= " - " . $place->address_extra;
@@ -12,9 +13,20 @@
         $time = "Aberto Sempre";
     else
         $time = "Aberto de " . $open . " até " . $close;
+
+    if (null !== $place->description and $place->description !== "") {
+        $headerDescription = $place->description;
+    } else {
+        if (null !== $place->info and $place->info !== "") {
+            $headerDescription = $place->info;
+        }
+    }
 ?>
 
-<?php getHtmlHeader() ?>
+<?php getHtmlHeader(array(
+    'title' => $place->name . " - QuissaTrip",
+    'description' => strip_tags(trim(preg_replace("/\n/", ", ", $headerDescription)))
+)) ?>
     <?php getNavbar() ?>
 
     <section class="single-header">
@@ -26,8 +38,6 @@
                 <h4><?php echo $place->address ?></h4>
                 <h6><?php echo $time ?></h6>
             </div>
-
-            <a href="<?php echo CIRCUIT_LINK . $place->circuit_id ?>" class="btn btn-outline-primary">Veja mais lugares do <?php echo $place->circuit_name ?></a>
         </div>
     </section>
 
@@ -48,7 +58,7 @@
 
         <?php if ((null === $place->description or $place->description == "") and (null == $place->info or $place->info == "")) { ?>
             <div>
-                <span class="title">Nenhuma informações a ser exibida</span>
+                <h3>Nenhuma informações a ser exibida</h3>
             </div> <?php
         } ?>
 

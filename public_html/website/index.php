@@ -3,6 +3,8 @@
 	session_cache_limiter(false);
 	session_start();
 	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+	//ini_set("allow_url_fopen", 1);
 
 	// Constants
     define('ASSETS', __DIR__ . "/assets");
@@ -15,13 +17,14 @@
 	// Internal Links
 	define("LUGARES_LINK", "/website/lugares");
 	define("LUGAR_LINK", "/website/lugares/");
-	define("CIRCUIT_LINK", "/website/circuitos/");
 	define("ROLEZINHOS_LINK", "/website/rolezinhos");
 	define("AGENDA_LINK", "/website/agenda");
 	define("SERVICOS_LINK", "/website/servicos");
 	define("ONDE_COMER_LINK", "/website/onde-comer");
 	define("ONDE_FICAR_LINK", "/website/onde-ficar");
 	define("PLAYSTORE_LINK", "#");
+
+	ini_set('allow_url_fopen', true);
 
 	require '../../website/vendor/autoload.php';
 	require '../../website/template/functions.php';
